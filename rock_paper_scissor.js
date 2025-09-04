@@ -7,16 +7,6 @@ const score = JSON.parse(localStorage.getItem('score')) ||
 
             updateScore ();
 
-            /*
-            if (score === null) {
-                score = {
-                    wins:0,
-                    losses:0,
-                    ties :0
-                };
-            }
-            */
-
             function playGame (playerMove) {
                 const computerMove =  pickcomputerMove();
 
@@ -88,10 +78,7 @@ const score = JSON.parse(localStorage.getItem('score')) ||
             function updateScore () {
                 document.querySelector('.js-score')
         .innerHTML = `Wins:${score.wins}, Losses:${score.losses}, Ties:${score.ties}`;
-        /*document.querySelector("body").style.background = "red";
-        setTimeout(function(){
-            document.querySelector("body").style.background = "black";
-        },250);*/
+        
             }
 
             
@@ -109,4 +96,5 @@ const score = JSON.parse(localStorage.getItem('score')) ||
                 }
                 
                 return computerMove;
+
             }
